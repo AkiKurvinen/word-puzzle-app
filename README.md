@@ -42,8 +42,14 @@ http://127.0.0.1:8000
 ### Database
 
 ```bash
+cd database
 docker-compose up -d
-USERNAME: admin
-PASSWORD: admin123
-
+npm install
+node seed.js
 ```
+See mongo-express running:  
+http://localhost:8081/ 
+
+Login with credentials
+USERNAME: admin  
+PASSWORD: admin123  
