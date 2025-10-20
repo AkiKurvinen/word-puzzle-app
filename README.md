@@ -37,3 +37,13 @@ fastapi dev main.py
 ```
 See backend running:  
 http://127.0.0.1:8000 
+
+
+### Database
+
+```bash
+docker-compose up -d
+USERNAME: admin
+PASSWORD: admin123
+
+```
