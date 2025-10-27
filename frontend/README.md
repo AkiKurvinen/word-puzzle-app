@@ -26,6 +26,10 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
+## Theming
+Override colors and fonts: [styles.less](src/styles.less)  
+List of theme variables: [default.less](node_modules/ng-zorro-antd/style/themes/default.less)
+
 ## Building
 
 To build the project run:
