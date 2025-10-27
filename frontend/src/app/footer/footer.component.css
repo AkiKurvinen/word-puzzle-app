@@ -1,0 +1,25 @@
+
+.custom-footer {
+	background: #f0f2f5;
+	padding: 24px 0;
+	text-align: center;
+	border-top: 1px solid #e8e8e8;
+}
+
+.footer-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+.footer-logo {
+	height: 32px;
+	width: auto;
+}
+
+.footer-title {
+	font-size: 1.1rem;
+	color: #595959;
+	font-weight: 500;
+}
