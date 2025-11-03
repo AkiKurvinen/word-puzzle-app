@@ -11,7 +11,6 @@ const preview: Preview = {
     options: {
       storySort: {
         order: ['Design tokens', 'Atoms', 'Molecules', 'Organisms', '*'],
-
       },
     },
   },
