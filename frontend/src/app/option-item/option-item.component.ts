@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @Component({
   selector: 'app-option-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NzIconModule],
   templateUrl: './option-item.component.html',
   styleUrl: './option-item.component.css'
 })
