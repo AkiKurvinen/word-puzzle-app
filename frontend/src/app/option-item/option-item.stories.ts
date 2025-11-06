@@ -21,15 +21,15 @@ type Story = StoryObj<OptionItemComponent>;
 
 export const Default: Story = {
   args: {
-    index: 0,
+    index: 1,
     label: 'Option item text',
-    selected: false,
+    selected: false
   },
 };
 
 export const Selected: Story = {
   args: {
-    index: 0,
+    index: 2,
     label: 'Option item text',
     selected: true,
   },
@@ -37,7 +37,7 @@ export const Selected: Story = {
 
 export const Correct: Story = {
   args: {
-    index: 0,
+    index: 3,
     label: 'Option item text',
     correct: true,
   },
@@ -45,27 +45,30 @@ export const Correct: Story = {
 
 export const Incorrect: Story = {
   args: {
-    index: 0,
+    index: 4,
     label: 'Option item text',
     correct: false,
+    disabled: true
   },
 };
 
 export const CorrectSelected: Story = {
   args: {
-    index: 0,
+    index: 5,
     label: 'Option item text',
     selected: true,
     correct: true,
+    disabled: true
   },
 };
 
 export const IncorrectSelected: Story = {
   args: {
-    index: 0,
+    index: 6,
     label: 'Option item text',
     selected: true,
     correct: false,
+    disabled: true
   },
 };
 
