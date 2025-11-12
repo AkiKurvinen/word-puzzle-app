@@ -38,6 +38,8 @@ fastapi dev main.py
 See backend running:  
 http://127.0.0.1:8000 
 
+See auto swagger docs:  
+http://127.0.0.1:8000/docs
 
 ### Database
 
