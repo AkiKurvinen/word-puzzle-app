@@ -15,9 +15,10 @@ export class QuizPageComponent implements OnInit {
   loading = true;
   constructor(private route: ActivatedRoute) {}
   async ngOnInit() {
+    const API_URL = (import.meta as any).env?.API_URL || 'http://127.0.0.1:8000';
     const quizname = this.route.snapshot.paramMap.get('quizname');
     try {
-      const response = await fetch(`data/${quizname}.json`);
+      const response = await fetch(`${API_URL}/quiz/${quizname}`);
       this.quizData = await response.json();
     } catch (e) {
       this.quizData = null;

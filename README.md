@@ -4,6 +4,9 @@ Word puzzle app
 ## Installation
 
 ### Frontend  
+
+- Copy frontend/env-example to .env
+
 ```bash
 cd frontend
 npm install
@@ -38,6 +41,8 @@ fastapi dev main.py
 See backend running:  
 http://127.0.0.1:8000 
 
+See auto swagger docs:  
+http://127.0.0.1:8000/docs
 
 ### Database
 
