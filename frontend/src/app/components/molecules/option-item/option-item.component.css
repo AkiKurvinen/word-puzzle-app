@@ -88,7 +88,7 @@
   color: var(--text-color-inverse);
 }
 
-.left {
+.left{
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -114,22 +114,4 @@
   margin: 0;
   padding: 0;
   margin-right: 0.5em;
-}
-
-.option-icon {
-  margin-top: 0.25em;
-}
-
-.icon-check::before {
-  content: '\2714';
-  /* checkmark */
-  color: var(--success-color);
-  font-size: 1.5em;
-}
-
-.icon-close::before {
-  content: '\2716';
-  /* cross */
-  color: var(--error-color);
-  font-size: 1.5em;
 }
