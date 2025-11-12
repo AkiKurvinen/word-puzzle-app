@@ -5,8 +5,6 @@ import { FooterComponent } from './components/organisms/footer/footer.component'
 import { HeaderComponent } from './components/organisms/header/header.component';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { OptionItemComponent } from './option-item/option-item.component'
-import { OptionListComponent } from './option-list/option-list.component';
 
 @Component({
   selector: 'app-root',
@@ -14,19 +12,6 @@ import { OptionListComponent } from './option-list/option-list.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-  title = 'the-app';
-  quizData: any = null;
-  loading = true;
-
-  async ngOnInit() {
-    try {
-      const response = await fetch('data/demo.json');
-      this.quizData = await response.json();
-    } catch (e) {
-      this.quizData = null;
-    } finally {
-      this.loading = false;
-    }
-  }
+export class AppComponent {
+  title = 'the-app'
 }

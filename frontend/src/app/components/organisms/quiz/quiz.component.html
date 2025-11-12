@@ -1,7 +1,7 @@
-<ng-template #quizContent>
-  <h2>{{ data?.meta }}</h2>
+<ng-container *ngIf="quizData || data">
+  <h2>{{ (quizData ?? data)?.meta }}</h2>
   <ng-container *ngIf="!end">
-    <h3>{{ data?.questions[current - 1]?.question }}</h3>
+    <h3>{{ (quizData ?? data)?.questions[current - 1]?.question }}</h3>
     <p>Question {{ current }} / {{ total }}</p>
     <app-option-list
       [options]="optionsView"
@@ -10,4 +10,4 @@
     ></app-option-list>
   </ng-container>
   <p *ngIf="end">Quiz ended! You got {{ score }} out of {{ total }} correct.</p>
-</ng-template>
+</ng-container>
