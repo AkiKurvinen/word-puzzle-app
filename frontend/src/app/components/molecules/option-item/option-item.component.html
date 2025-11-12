@@ -7,10 +7,10 @@
   <ng-container *ngIf="reveal && (item?.selected || item?.disabled) && (item?.correct || item?.wrong || item?.correct === false)">
     <div class="option-icon">
       <ng-container *ngIf="item?.correct; else wrongIcon">
-        <span class="icon-check"></span>
+        <nz-icon nzType="check" nzTheme="outline"></nz-icon>
       </ng-container>
       <ng-template #wrongIcon>
-        <span class="icon-close"></span>
+        <nz-icon nzType="close" nzTheme="outline"></nz-icon>
       </ng-template>
     </div>
   </ng-container>
