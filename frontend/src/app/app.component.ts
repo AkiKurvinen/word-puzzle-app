@@ -5,6 +5,8 @@ import { FooterComponent } from './components/organisms/footer/footer.component'
 import { HeaderComponent } from './components/organisms/header/header.component';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { OptionItemComponent } from './option-item/option-item.component'
+import { OptionListComponent } from './option-list/option-list.component';
 
 @Component({
   selector: 'app-root',
