@@ -4,6 +4,9 @@ Word puzzle app
 ## Installation
 
 ### Frontend  
+
+- Copy frontend/env-example to .env
+
 ```bash
 cd frontend
 npm install
