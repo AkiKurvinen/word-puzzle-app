@@ -7,9 +7,10 @@
       <p nz-paragraph>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, eum quisquam enim animi ea
         impedit mollitia praesentium et doloribus doloremque.</p>
     </nz-typography>
-    <button nz-button nzType="primary">Ant Design Button</button>
-    <app-option-list/>
-    <app-option-item [index] = 1 [label]="'Any text'"/>
+
+  <button nz-button nzType="primary">Ant Design Button</button>
+
+  <app-quiz [data]="quizData" [loading]="loading"></app-quiz>
   </div>
 </main>
 <app-footer [title]="'Word Puzzle App'"></app-footer>

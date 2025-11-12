@@ -1,0 +1,13 @@
+<ng-template #quizContent>
+  <h2>{{ data?.meta }}</h2>
+  <ng-container *ngIf="!end">
+    <h3>{{ data?.questions[current - 1]?.question }}</h3>
+    <p>Question {{ current }} / {{ total }}</p>
+    <app-option-list
+      [options]="optionsView"
+      [reveal]="reveal"
+      (select)="onOptionSelect($event)"
+    ></app-option-list>
+  </ng-container>
+  <p *ngIf="end">Quiz ended! You got {{ score }} out of {{ total }} correct.</p>
+</ng-template>
