@@ -1,0 +1,103 @@
+/* Use Ant Design theme variables */
+:host li {
+  color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  border: solid thin var(--primary-color);
+  border-left: none;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2em;
+  padding-right: 0.5em;
+}
+:host li:hover:not(.disabled),
+:host li:focus:not(.disabled) {
+  cursor: pointer;
+}
+:host li:hover:not(.disabled) .index-marker {
+  background-color: var(--primary-color-hover);
+}
+:host li.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: var(--disabled-color);
+  border-color: var(--disabled-color);
+}
+:host li.disabled .index-marker {
+  color: var(--disabled-color);
+  border-color: var(--disabled-color);
+}
+:host li.disabled.wrong,
+:host li.wrong.disabled {
+  color: var(--error-color) !important;
+  border-color: var(--error-color) !important;
+}
+:host li.disabled.wrong .index-marker,
+:host li.wrong.disabled .index-marker {
+  color: var(--error-color) !important;
+  border-color: var(--error-color) !important;
+}
+:host li.selected.correct,
+:host li.disabled.correct {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+:host li.selected.correct .index-marker,
+:host li.disabled.correct .index-marker {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+:host li.wrong {
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+:host li.wrong .index-marker {
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+:host li.selected:not(.disabled) {
+  background: var(--primary-color-outline);
+  color: var(--text-color-inverse);
+}
+:host li.selected:not(.disabled) .index-marker {
+  background-color: var(--primary-color-hover);
+}
+:host li.selected.correct {
+  background: var(--success-color-hover);
+}
+:host li.selected.wrong {
+  background: var(--error-color-hover);
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.index-marker {
+  border-radius: 1em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  border: solid thin var(--primary-color);
+  color: var(--primary-color);
+}
+.option-label {
+  margin: 0;
+  padding: 0;
+  margin-right: 0.5em;
+}
+.option-icon {
+  margin-top: 0.25em;
+}
+.icon-check::before {
+  content: '\2714'; /* checkmark */
+  color: var(--success-color);
+  font-size: 1.5em;
+}
+.icon-close::before {
+  content: '\2716'; /* cross */
+  color: var(--error-color);
+  font-size: 1.5em;
+}

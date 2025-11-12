@@ -1,0 +1,32 @@
+{
+  "meta": "Demo quiz 2025",
+  "questions": [
+    {
+      "question": "Which planet is known as the Red Planet?",
+      "options": [
+        { "label": "Earth", "correct": false },
+        { "label": "Mars", "correct": true },
+        { "label": "Jupiter", "correct": false },
+        { "label": "Venus", "correct": false }
+      ]
+    },
+    {
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "options": [
+        { "label": "William Shakespeare", "correct": true },
+        { "label": "Charles Dickens", "correct": false },
+        { "label": "Jane Austen", "correct": false },
+        { "label": "Mark Twain", "correct": false }
+      ]
+    },
+    {
+      "question": "What is the capital of France?",
+      "options": [
+        { "label": "Berlin", "correct": false },
+        { "label": "Madrid", "correct": false },
+        { "label": "Paris", "correct": true },
+        { "label": "Rome", "correct": false }
+      ]
+    }
+  ]
+}

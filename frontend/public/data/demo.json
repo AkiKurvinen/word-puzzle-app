@@ -1,0 +1,32 @@
+{
+  "meta": "Random quiz 2025",
+  "questions": [
+    {
+      "question": "What is the best pet?",
+      "options": [
+        { "label": "Cat", "correct": false },
+        { "label": "Dog", "correct": true },
+        { "label": "Turtle", "correct": false },
+        { "label": "Snake", "correct": false }
+      ]
+    },
+    {
+      "question": "What is the fastest car?",
+      "options": [
+        { "label": "Ford", "correct": false },
+        { "label": "Toyota", "correct": true },
+        { "label": "Audi", "correct": false },
+        { "label": "Saab", "correct": false }
+      ]
+    },
+    {
+      "question": "What is the most beautiful color?",
+      "options": [
+        { "label": "Green", "correct": false },
+        { "label": "Red", "correct": true },
+        { "label": "Yellow", "correct": false },
+        { "label": "Blue", "correct": false }
+      ]
+    }
+  ]
+}

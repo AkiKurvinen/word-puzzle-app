@@ -1,0 +1,10 @@
+<ul class="option-list">
+  <ng-container *ngFor="let option of options; let i = index">
+    <app-option-item
+      [item]="option"
+      [index]="i + 1"
+      [reveal]="reveal"
+      (click)="onSelect(i)"
+    ></app-option-item>
+  </ng-container>
+</ul>
