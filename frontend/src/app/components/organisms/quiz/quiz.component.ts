@@ -10,7 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent {
+  private revealTimeout: any = null;
   @Input() data: any;
+  @Input() quizData: any;
   @Input() loading: boolean = false;
 
   score = 0;
@@ -21,7 +23,8 @@ export class QuizComponent {
   reveal = false;
 
   get total() {
-    return this.data?.questions?.length || 0;
+    const d = this.quizData ?? this.data;
+    return d?.questions?.length || 0;
   }
 
   ngOnChanges() {
@@ -33,7 +36,8 @@ export class QuizComponent {
   }
 
   updateOptionsView() {
-    const options: any[] = this.data?.questions?.[this.current - 1]?.options || [];
+    const d = this.quizData ?? this.data;
+    const options: any[] = d?.questions?.[this.current - 1]?.options || [];
     if (this.selectedIdx === null) {
       this.optionsView = options.map((o: any) => ({ ...o, selected: false, disabled: false, correct: o.correct, wrong: false }));
     } else {
@@ -51,17 +55,23 @@ export class QuizComponent {
   }
 
   onOptionSelect(index: number) {
-    if (this.selectedIdx !== null) return;
+    if (this.selectedIdx !== null || this.revealTimeout) return;
     this.selectedIdx = index;
-    this.reveal = true;
-    const options = this.data?.questions?.[this.current - 1]?.options;
-    if (!options) return;
-    const selected = options[index];
-    if (selected?.correct) this.score++;
+    this.reveal = false;
     this.updateOptionsView();
-    setTimeout(() => {
-      this.handleNextQuestion();
-    }, 1000); // mimic reveal delay
+    this.revealTimeout = setTimeout(() => {
+      this.reveal = true;
+      const d = this.quizData ?? this.data;
+      const options = d?.questions?.[this.current - 1]?.options;
+      if (!options) return;
+      const selected = options[index];
+      if (selected?.correct) this.score++;
+      this.updateOptionsView();
+      setTimeout(() => {
+        this.handleNextQuestion();
+        this.revealTimeout = null;
+      }, 2000); // delay next question
+    }, 1000); // delay reveal
   }
 
   handleNextQuestion() {
