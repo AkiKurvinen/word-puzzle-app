@@ -1,6 +1,4 @@
-// Angular context: import Angular components if needed, or mock for Storybook
 import { OptionItemComponent } from './option-item.component';
-import { OptionItemSkeletonComponent } from './option-item-skeleton.component';
 
 export default {
   title: 'Molecules/OptionItem',
@@ -114,8 +112,4 @@ export const DisabledSelectedWrong = {
         },
         reveal: true
     },
-};
-
-export const Skeleton = {
-  component: OptionItemSkeletonComponent,
 };

@@ -1,12 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { OptionItemComponent } from '../../molecules/option-item/option-item.component';
-import { OptionItemSkeletonComponent } from '../../molecules/option-item/option-item-skeleton.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-option-list',
   standalone: true,
-  imports: [CommonModule, OptionItemComponent, OptionItemSkeletonComponent],
+  imports: [CommonModule, OptionItemComponent],
   templateUrl: './option-list.component.html',
   styleUrls: ['./option-list.component.css']
 })

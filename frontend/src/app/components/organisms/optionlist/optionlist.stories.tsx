@@ -1,7 +1,5 @@
 // Angular context: import Angular components if needed, or mock for Storybook
 import { OptionListComponent } from './option-list.component';
-import { OptionItemSkeletonComponent } from '../../molecules/option-item/option-item-skeleton.component';
-
 
 export default {
   title: 'Organisms/OptionList',
@@ -62,9 +60,4 @@ export const AllDisabled = {
     options: options_data.map(opt => ({ ...opt, disabled: true })),
     reveal: false
   },
-};
-
-
-export const Skeleton = {
-  component: OptionItemSkeletonComponent,
 };
