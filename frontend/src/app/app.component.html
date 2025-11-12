@@ -1,17 +1,7 @@
 <app-header [title]="'Word Puzzle App'" [logo]="'angular_logo.webp'"></app-header>
 <main class="main">
   <div class="content">
-    <!-- Main content here -->
-    <nz-typography>
-      <h1 nz-title>Word Puzzle App</h1>
-      <p nz-paragraph>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, eum quisquam enim animi ea
-        impedit mollitia praesentium et doloribus doloremque.</p>
-    </nz-typography>
-
-  <button nz-button nzType="primary">Ant Design Button</button>
-
-<app-quiz [quizData]="quizData" [loading]="loading"></app-quiz>
+    <router-outlet></router-outlet>
   </div>
 </main>
 <app-footer [title]="'Word Puzzle App'"></app-footer>
-<router-outlet />
