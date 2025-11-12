@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { OptionListComponent } from '../optionlist/option-list.component';
 import { CommonModule } from '@angular/common';
+import { OptionListComponent } from '../optionlist/option-list.component';
 
 @Component({
   selector: 'app-quiz',
