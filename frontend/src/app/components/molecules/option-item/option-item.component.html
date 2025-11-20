@@ -1,7 +1,7 @@
 <li [ngClass]="classNames">
   <div class="left">
     <span class="index-marker">{{ index }}</span>
-    <p class="option-label">{{ item?.label }}</p>
+    <p class="option-label" data-test-id="option-item-label">{{ item?.label }}</p>
   </div>
   <!-- Only show icon if reveal is true -->
   <ng-container *ngIf="reveal && (item?.selected || item?.disabled) && (item?.correct || item?.wrong || item?.correct === false)">
